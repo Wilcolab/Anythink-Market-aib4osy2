@@ -1,0 +1,39 @@
+
+////random prompt: ZERO-SHOT
+
+import re
+
+def to_snake_case(s: str) -> str:
+    """
+    Convert a string to snake_case.
+
+    Examples:
+    - "HelloWorld" -> "hello_world"
+    - "hello world!" -> "hello_world"
+    - "ThisIsATest123" -> "this_is_a_test123"
+    - "already_snake" -> "already_snake"
+    """
+    if not s:
+        return ""
+    s = s.strip()
+    # Insert underscore between lowercase/number and uppercase (camelCase / PascalCase)
+    s = re.sub(r'(?<=[a-z0-9])(?=[A-Z])', '_', s)
+    # Replace any sequence of non-alphanumeric characters with underscore
+    s = re.sub(r'[^0-9A-Za-z]+', '_', s)
+    # Collapse multiple underscores and lowercase
+    s = re.sub(r'_{2,}', '_', s).strip('_').lower()
+    return s
+
+
+if __name__ == "__main__":
+    samples = [
+        "HelloWorld",
+        "hello world!",
+        "ThisIsATest123",
+        "already_snake",
+        "mixed-Separators andCamelCase",
+        "  Leading and trailing  ",
+        ""
+    ]
+    for t in samples:
+        print(f"'{t}' -> '{to_snake_case(t)}'")
