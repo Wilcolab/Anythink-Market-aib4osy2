@@ -9,7 +9,6 @@
 // Here are some examples:
 //  "hello world" -> "helloWorld"
 //  "  Foo_bar-baz " -> "fooBarBaz"
-//  "SCREEN_NAME" -> "screenName"
 //  "mobile-number" -> "mobileNumber"
 //  "22robin Hood" -> Throws error
 //  null -> Throws error

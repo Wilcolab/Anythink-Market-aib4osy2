@@ -49,7 +49,7 @@
  *  - Removes any stray non-alphanumeric characters from each segment.
  *  - Lowercases each resulting segment.
  *  - Joins the segments with a single dot ('.') to produce dot.case format.
- *
+ ///////////
  * Notes:
  *  - Numeric characters are preserved in segments (e.g. "item42" -> "item42").
  *  - Consecutive non-alphanumeric separators are treated as a single split boundary.

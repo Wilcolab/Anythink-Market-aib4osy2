@@ -1,3 +1,18 @@
+/// chain prompt.js
+// Write a JavaScript function toKebabCase that converts strings to kebab-case format. The function should handle the following cases:
+// - Convert spaces and underscores to hyphens.
+// - Convert camelCase to kebab-case.
+// - All letters should be in lowercase.
+// - If the input is null, undefined, or not a string, throw an error.
+// Here are some examples:
+// "HelloWorld" -> "hello-world"
+// "hello_world" -> "hello-world"
+// "hello world" -> "hello-world"
+// null -> Throws error
+// undefined -> Throws error
+// 123 -> Throws error
+
+
 function toKebabCase(input) {
     // Validate input
     if (input === null || input === undefined || typeof input !== 'string') {

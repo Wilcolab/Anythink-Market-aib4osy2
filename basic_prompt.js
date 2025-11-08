@@ -1,4 +1,4 @@
-//bsic prompt:
+////////////// bsic prompt:
 // Write a JavaScript function camelCase that converts strings to camelCase format.
 
 
